@@ -4,15 +4,16 @@
 #
 Name     : R-qap
 Version  : 0.1.1
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/qap_0.1-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/qap_0.1-1.tar.gz
 Summary  : Heuristics for the Quadratic Assignment Problem (QAP)
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-qap-lib = %{version}-%{release}
-Requires: R-assertthat
+Requires: R-rlang
 BuildRequires : R-assertthat
+BuildRequires : R-rlang
 BuildRequires : buildreq-R
 
 %description
@@ -38,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552783002
+export SOURCE_DATE_EPOCH=1552949719
 
 %install
-export SOURCE_DATE_EPOCH=1552783002
+export SOURCE_DATE_EPOCH=1552949719
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
