@@ -4,7 +4,7 @@
 #
 Name     : R-qap
 Version  : 0.1.1
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/qap_0.1-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/qap_0.1-1.tar.gz
 Summary  : Heuristics for the Quadratic Assignment Problem (QAP)
@@ -14,6 +14,7 @@ Requires: R-qap-lib = %{version}-%{release}
 BuildRequires : R-assertthat
 BuildRequires : R-rlang
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 # qap - Heuristics for the Quadratic Assignment Problem (QAP) - R package
@@ -37,13 +38,13 @@ lib components for the R-qap package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1556479590
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1571881604
 
 %install
-export SOURCE_DATE_EPOCH=1556479590
+export SOURCE_DATE_EPOCH=1571881604
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,7 +73,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
