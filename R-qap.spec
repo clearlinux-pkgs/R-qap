@@ -4,7 +4,7 @@
 #
 Name     : R-qap
 Version  : 0.1.2
-Release  : 50
+Release  : 51
 URL      : https://cran.r-project.org/src/contrib/qap_0.1-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/qap_0.1-2.tar.gz
 Summary  : Heuristics for the Quadratic Assignment Problem (QAP)
